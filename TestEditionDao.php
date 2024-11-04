@@ -38,7 +38,7 @@ function testListerEditions() {
 // Function to test retrieving an edition
 function testRecupererEdition() {
     $editionDao = new EditionDao();
-    $result = $editionDao->recupererEdition(1, 'id'); // Change 'id' to the property you want to search by
+    $result = $editionDao->recupererEdition(1, 'id'); 
 
     if ($result) {
         echo "Retrieve Edition: ID: " . $result->getId() . ", Name: " . $result->getNom() . "\n";
@@ -51,9 +51,8 @@ function testRecupererEdition() {
 function testModifierEdition() {
     $editionDao = new EditionDao();
     $edition = new Edition();
-    $edition->setId(1); // Set the ID of the edition you want to modify
+    $edition->setId(1); 
     $edition->setNom("Updated Edition Name");
-
     $result = $editionDao->modifierEdition($edition);
     echo "Update Edition: " . $result . "\n";
 }
@@ -61,7 +60,7 @@ function testModifierEdition() {
 // Function to test deleting an edition
 function testSupprimerEdition() {
     $editionDao = new EditionDao();
-    $result = $editionDao->supprimerEdition(1, 'id'); // Change 'id' to the property you want to search by
+    $result = $editionDao->supprimerEdition(1, 'id'); 
     echo "Delete Edition: " . $result . "\n";
 }
 

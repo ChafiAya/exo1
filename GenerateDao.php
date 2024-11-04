@@ -140,15 +140,15 @@ function generateDaoClass($classFile, $tableName = null, $customProperties = [],
 }
 
 
-$classFile = 'Edition.php'; 
+$classFile = 'Collections.php'; 
 
 
-$customProperties = ['Id', 'Nom'];  
-$customGetters = ['getId', 'getNom'];
-$customSetters = ['setId', 'setNom'];  
+$customProperties = ['Idcollection', 'Nomcollection'];  
+$customGetters = ['getIdcollection', 'getNomcollection'];
+$customSetters = ['setIdcollection', 'setNomcollection'];  
 
 try {
-    $daoClassCode = generateDaoClass($classFile, 'Editions', $customProperties, $customGetters, $customSetters);
+    $daoClassCode = generateDaoClass($classFile, 'Collections', $customProperties, $customGetters, $customSetters);
     file_put_contents('./' . basename($classFile, '.php') . 'Dao.php', $daoClassCode);
     echo "DAO class for " . basename($classFile, '.php') . " has been generated and saved as " . basename($classFile, '.php') . "Dao.php.\n";
 } catch (Exception $e) {
